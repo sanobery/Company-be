@@ -1,5 +1,7 @@
 export default () => {
   return async (ctx: any, next: () => Promise<any>) => {
+    console.log("x-forwarded-proto:", ctx.request.header["x-forwarded-proto"]);
+    console.log("ctx.secure:", ctx.secure);
     // Only redirect HTTP requests in production
     if (
       process.env.NODE_ENV === "production" &&
