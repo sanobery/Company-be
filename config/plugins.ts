@@ -1,4 +1,3 @@
-// export default () => ({});
 export default ({ env }) => ({
   upload: {
     config: {
