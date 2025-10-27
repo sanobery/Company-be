@@ -1,4 +1,11 @@
-export default [
+const middlewares = [
+  // Custom HTTPS enforcement middleware
+  {
+    name: "global::force-https",
+    resolve: "./src/middlewares/force-https",
+  },
+
+  // Default Strapi middlewares
   "strapi::logger",
   "strapi::errors",
   "strapi::security",
@@ -6,9 +13,9 @@ export default [
     name: "strapi::session",
     config: {
       cookie: {
-        secure: process.env.COOKIE_SECURE === "true",
+        secure: process.env.NODE_ENV === "production", // ✅ only secure in prod
         httpOnly: true,
-        maxAge: 14 * 24 * 60 * 60 * 1000,
+        maxAge: 14 * 24 * 60 * 60 * 1000, // 14 days
       },
     },
   },
@@ -19,3 +26,5 @@ export default [
   "strapi::favicon",
   "strapi::public",
 ];
+
+export default middlewares;
