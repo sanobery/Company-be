@@ -59,3 +59,12 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+🧠 1️⃣ Install dependencies
+
+Run this in your Strapi project root:
+
+```bash
+npm install axios cloudinary dotenv
+npm install -D @types/node @types/cloudinary
+```

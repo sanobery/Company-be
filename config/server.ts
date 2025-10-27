@@ -5,11 +5,12 @@ export default ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
-  // ✅ Tell Strapi it's behind a trusted proxy (Render uses HTTPS → proxy → Strapi)
-  proxy: true,
 
   // Public URL for Strapi
   url: env("PUBLIC_URL", "https://company-be.onrender.com"),
+
+  // ✅ Tell Strapi it's behind a trusted proxy (Render uses HTTPS → proxy → Strapi)
+  proxy: true,
 
   // ✅ Explicitly enable secure cookies for admin (important for HTTPS)
   admin: {
