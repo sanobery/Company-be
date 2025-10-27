@@ -6,9 +6,9 @@ export default [
     name: "strapi::session",
     config: {
       cookie: {
-        secure: process.env.COOKIE_SECURE === "true", // set to false in dev
+        secure: process.env.COOKIE_SECURE === "true",
         httpOnly: true,
-        maxAge: 14 * 24 * 60 * 60 * 1000, // 14 days
+        maxAge: 14 * 24 * 60 * 60 * 1000,
       },
     },
   },
@@ -16,7 +16,6 @@ export default [
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
-  "strapi::session",
   "strapi::favicon",
   "strapi::public",
 ];
