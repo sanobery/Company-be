@@ -1,4 +1,15 @@
 const middlewares = [
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
+      headers: ["*"], // allow all headers
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+      credentials: true, // allow cookies / auth if needed
+    },
+  },
+  { name: "global::cache", resolve: "./src/middlewares/cache" },
   // Custom HTTPS enforcement middleware
   {
     name: "global::force-https",
@@ -19,7 +30,7 @@ const middlewares = [
       },
     },
   },
-  "strapi::cors",
+
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",

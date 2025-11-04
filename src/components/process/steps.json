@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_process_steps",
+  "info": {
+    "displayName": "steps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

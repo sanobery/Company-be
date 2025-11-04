@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "site_settings",
   "info": {
     "singularName": "site-setting",
@@ -11,21 +11,30 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "companyName": {
-      "type": "string"
+    "hero": {
+      "type": "component",
+      "component": "hero.hero-section",
+      "repeatable": false
     },
-    "logo": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "testimonials": {
+      "type": "component",
+      "component": "testimonial.section-testimonials",
+      "repeatable": true
     },
-    "companyDescription": {
-      "type": "blocks"
+    "processSection": {
+      "type": "component",
+      "component": "process.process-section",
+      "repeatable": false
+    },
+    "stepSection": {
+      "type": "component",
+      "component": "steps.steps-section",
+      "repeatable": false
+    },
+    "footerSection": {
+      "type": "component",
+      "component": "footer.footer-section",
+      "repeatable": false
     }
   }
 }

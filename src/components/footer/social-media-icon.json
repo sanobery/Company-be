@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footer_social_media_icons",
+  "info": {
+    "displayName": "social-media-icon"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "icons": {
+      "type": "enumeration",
+      "enum": ["FaInstagram", "FaFacebook", "FaLinkedin", "FaBlog", "FaTwitter"]
+    }
+  },
+  "config": {}
+}

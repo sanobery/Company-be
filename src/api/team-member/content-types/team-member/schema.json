@@ -14,15 +14,10 @@
     "name": {
       "type": "string"
     },
-    "photo": {
+    "image": {
       "type": "media",
       "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "designation": {
       "type": "string"

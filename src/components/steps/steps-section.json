@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_steps_steps_sections",
+  "info": {
+    "displayName": "steps-section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "stepItem": {
+      "type": "component",
+      "component": "step-item.step-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

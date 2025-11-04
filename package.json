@@ -14,10 +14,12 @@
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
-    "migrate:cloudinary": "ts-node scripts/migrate-to-cloudinary.ts"
+    "migrate:cloudinary": "ts-node scripts/migrate-to-cloudinary.ts",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.27.0",
+    "@strapi/plugin-documentation": "^5.29.0",
     "@strapi/plugin-users-permissions": "5.27.0",
     "@strapi/provider-upload-cloudinary": "^5.29.0",
     "@strapi/strapi": "5.27.0",
@@ -26,16 +28,19 @@
     "cloudinary": "^2.8.0",
     "dotenv": "^17.2.3",
     "fs-extra": "^10.0.0",
+    "ioredis": "^5.8.2",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-plugin-redis": "^1.1.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.19.23",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },

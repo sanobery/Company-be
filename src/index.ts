@@ -20,6 +20,5 @@ export default {
   async bootstrap({ strapi }) {
     // ✅ Force Koa (Strapi's HTTP server) to trust Render's proxy headers
     strapi.server.app.proxy = true;
-    console.log("✅ Proxy trust enabled at runtime");
   },
 };
