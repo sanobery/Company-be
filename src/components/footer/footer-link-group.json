@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_footer_link_groups",
+  "info": {
+    "displayName": "footer-link-group"
+  },
+  "options": {},
+  "attributes": {
+    "groupLabel": {
+      "type": "string"
+    },
+    "groupLinks": {
+      "type": "component",
+      "component": "shared.footer-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

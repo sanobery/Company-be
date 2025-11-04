@@ -59,3 +59,86 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+🧠 1️⃣ Install dependencies
+
+Run this in your Strapi project root:
+
+```bash
+npm install axios cloudinary dotenv
+npm install -D @types/node @types/cloudinary
+```
+
+## Redis in Strapi?
+
+Strapi by default doesn’t cache queries — every API hit goes straight to the database.
+If your content doesn’t change often, caching responses (or query results) in Redis can cut response times from ~100ms → ~5ms 🚀.
+
+```bash
+npm install ioredis strapi-plugin-redis
+```
+
+## Installation of Prettier
+
+Install Prettier as a development dependency:
+
+```bash
+# Using npm
+npm install --save-dev prettier
+```
+
+## Creating Prettier Configuration File
+
+Instead of relying on IDE formatting, create a configuration file in the project root:
+
+.prettierrc (JSON format)
+
+{
+"semi": true,
+"singleQuote": true,
+"trailingComma": "es5",
+"tabWidth": 2,
+"printWidth": 80,
+"endOfLine": "lf"
+}
+
+## Using Prettier
+
+Format all files
+
+```bash
+npx prettier --write .
+npx prettier --check .
+```
+
+## Adding Prettier Scripts to package.json
+
+"scripts": {
+"format": "prettier --write .",
+"format:check": "prettier --check ."
+}
+
+Now you can run:
+
+```bash
+npm run format
+npm run format:check
+```
+
+## Swagger / OpenAPI Documentation Setup for Strapi v5
+
+🧩 Overview
+
+Strapi v5 supports auto-generation of OpenAPI (Swagger) documentation through the official @strapi/plugin-documentation.
+This plugin creates both a Swagger UI and an OpenAPI specification file, making it easy to explore, test, and share your API.
+
+```bash
+npm run strapi openapi generate
+npm install @strapi/plugin-documentation
+```
+
+Then open the following URL in your browser:
+
+👉 http://localhost:1337/documentation
+
+You’ll see a Swagger UI interface listing all available API endpoints with descriptions, request parameters, and response schemas.

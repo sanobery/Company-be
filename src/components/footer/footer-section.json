@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_footer_footer_sections",
+  "info": {
+    "displayName": "footer-section"
+  },
+  "options": {},
+  "attributes": {
+    "paragraph": {
+      "type": "string"
+    },
+    "address": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "socialMediaIcon": {
+      "type": "component",
+      "component": "footer.social-media-icon",
+      "repeatable": true
+    },
+    "footerLinkGroup": {
+      "type": "component",
+      "component": "footer.footer-link-group",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

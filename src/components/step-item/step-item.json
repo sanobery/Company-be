@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_step_item_step_items",
+  "info": {
+    "displayName": "step-item"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": ["FaPenFancy", " FaTags", "FaUser"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

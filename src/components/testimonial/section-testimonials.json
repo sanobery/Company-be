@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_testimonial_section_testimonials",
+  "info": {
+    "displayName": "section-testimonials"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "project": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

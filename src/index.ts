@@ -16,5 +16,9 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  //   bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  async bootstrap({ strapi }) {
+    // ✅ Force Koa (Strapi's HTTP server) to trust Render's proxy headers
+    strapi.server.app.proxy = true;
+  },
 };
