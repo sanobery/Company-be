@@ -16,18 +16,18 @@ export default ({ env }) => ({
       },
     },
   },
-  redis: {
-    config: {
-      connections: {
-        default: {
-          connection: {
-            host: env("REDIS_HOST", "127.0.0.1"),
-            port: env.int("REDIS_PORT", 6379),
-            db: env.int("REDIS_DB", 0),
-            password: env("REDIS_PASSWORD", undefined),
-          },
-        },
-      },
-    },
-  },
+  //   redis: {
+  //     config: {
+  //       connections: {
+  //         default: {
+  //           connection: {
+  //             host: env("REDIS_HOST", "127.0.0.1"),
+  //             port: env.int("REDIS_PORT", 6379),
+  //             db: env.int("REDIS_DB", 0),
+  //             password: env("REDIS_PASSWORD", undefined),
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
 });

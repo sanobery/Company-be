@@ -1,14 +1,14 @@
-import Redis from "ioredis";
+// import Redis from "ioredis";
 
 /**
  * Global cache middleware for Strapi v5
  * Must export a factory function that returns the actual middleware.
  */
-const redis = new Redis({
-  host: process.env.REDIS_HOST || "127.0.0.1",
-  port: Number(process.env.REDIS_PORT || 6379),
-  db: Number(process.env.REDIS_DB || 0),
-});
+// const redis = new Redis({
+//   host: process.env.REDIS_HOST || "127.0.0.1",
+//   port: Number(process.env.REDIS_PORT || 6379),
+//   db: Number(process.env.REDIS_DB || 0),
+// });
 
 const cacheMiddleware = async (ctx, next) => {
   if (ctx.method !== "GET") {
