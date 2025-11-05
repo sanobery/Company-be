@@ -3,7 +3,12 @@ const middlewares = [
     name: "strapi::cors",
     config: {
       enabled: true,
-      origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
+      origin: [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://company-fe-mu.vercel.app",
+      ], // ✅ Your frontend domain
+
       headers: ["*"], // allow all headers
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
       credentials: true, // allow cookies / auth if needed
