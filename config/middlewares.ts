@@ -6,7 +6,7 @@ const middlewares = [
       origin: [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
-        // "https://company-fe-mu.vercel.app",
+        "https://company-fe-mu.vercel.app",
       ], // ✅ Your frontend domain
 
       headers: ["*"], // allow all headers
