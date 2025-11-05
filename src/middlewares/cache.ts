@@ -16,21 +16,21 @@ const cacheMiddleware = async (ctx, next) => {
     return;
   }
 
-  const key = `cache:${ctx.request.url}`;
-  const cached = await redis.get(key);
+  //   const key = `cache:${ctx.request.url}`;
+  //   const cached = await redis.get(key);
 
-  if (cached) {
-    ctx.set("X-Cache", "HIT");
-    ctx.body = JSON.parse(cached);
-    return;
-  }
+  //   if (cached) {
+  //     ctx.set("X-Cache", "HIT");
+  //     ctx.body = JSON.parse(cached);
+  //     return;
+  //   }
 
   await next();
 
-  if (ctx.status === 200 && ctx.body) {
-    await redis.setex(key, 60, JSON.stringify(ctx.body)); // 60 seconds
-    ctx.set("X-Cache", "MISS");
-  }
+  //   if (ctx.status === 200 && ctx.body) {
+  //     await redis.setex(key, 60, JSON.stringify(ctx.body)); // 60 seconds
+  //     ctx.set("X-Cache", "MISS");
+  //   }
 };
 
 /**
